@@ -1,0 +1,78 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aeris-promptshield"
+version = "0.1.0"
+description = "Prompt injection detection for AI applications"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    { name = "Aeris Systems", email = "aeris-ai@proton.me" }
+]
+keywords = [
+    "prompt-injection",
+    "ai-security",
+    "llm",
+    "chatgpt",
+    "claude",
+    "guardrails",
+    "ai-safety",
+    "openai",
+    "anthropic",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+api = ["httpx>=0.24.0"]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "httpx>=0.24.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/aeris-systems/aeris-promptshield"
+Documentation = "https://github.com/aeris-systems/aeris-promptshield#readme"
+Repository = "https://github.com/aeris-systems/aeris-promptshield"
+Issues = "https://github.com/aeris-systems/aeris-promptshield/issues"
+Changelog = "https://github.com/aeris-systems/aeris-promptshield/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["aeris_promptshield"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.8"
+strict = true
+warn_return_any = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

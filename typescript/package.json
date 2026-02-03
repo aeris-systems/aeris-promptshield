@@ -1,0 +1,58 @@
+{
+  "name": "aeris-promptshield",
+  "version": "0.1.0",
+  "description": "Prompt injection detection for AI applications",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeris-systems/aeris-promptshield.git"
+  },
+  "keywords": [
+    "prompt-injection",
+    "ai-security",
+    "llm",
+    "chatgpt",
+    "claude",
+    "openai",
+    "anthropic",
+    "guardrails",
+    "ai-safety"
+  ],
+  "author": "Aeris Systems <aeris-ai@proton.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aeris-systems/aeris-promptshield/issues"
+  },
+  "homepage": "https://github.com/aeris-systems/aeris-promptshield#readme",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
