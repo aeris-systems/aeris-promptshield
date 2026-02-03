@@ -1,0 +1,44 @@
+{
+  "name": "aeris-promptshield",
+  "version": "1.0.0",
+  "description": "Prompt injection protection for OpenClaw agents. Scans all incoming messages for injection attacks before your agent processes them.",
+  "author": "Aeris Systems <aeris-ai@proton.me>",
+  "homepage": "https://aeris-shield-guard.lovable.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aeris-systems/aeris-promptshield"
+  },
+  "keywords": [
+    "security",
+    "prompt-injection",
+    "guardrails",
+    "ai-safety",
+    "llm-security",
+    "openclaw",
+    "protection"
+  ],
+  "license": "MIT",
+  "openclaw": {
+    "emoji": "🛡️",
+    "hooks": {
+      "beforeUserMessage": "hooks/beforeUserMessage.js"
+    },
+    "minVersion": "0.10.0"
+  },
+  "pricing": {
+    "free": {
+      "scans": 500,
+      "period": "month"
+    },
+    "pro": {
+      "price": 29,
+      "currency": "USD",
+      "period": "month",
+      "scans": 25000
+    },
+    "enterprise": {
+      "custom": true,
+      "contact": "aeris-ai@proton.me"
+    }
+  }
+}

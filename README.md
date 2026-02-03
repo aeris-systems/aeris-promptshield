@@ -1,5 +1,9 @@
 # 🛡️ Aeris PromptShield
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![API Status](https://img.shields.io/badge/API-Live-brightgreen)](https://shield-aeris-api.oclaw597.workers.dev/health)
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-Compatible-blue)](https://openclaw.ai)
+
 **Prompt injection protection for OpenClaw agents.**
 
 One command. Instant protection. Your AI agents handle sensitive data—make sure they can't be manipulated.
@@ -177,7 +181,22 @@ MIT © [Aeris Systems](https://aeris-shield-guard.lovable.app)
 
 ---
 
+## Contributing
+
+PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+Areas we're actively improving:
+- More language coverage for multi-language attacks
+- Better obfuscation detection (emoji, zalgo, etc.)
+- Integration guides for other AI frameworks
+
+---
+
 <p align="center">
   <b>Built for OpenClaw</b><br>
   <a href="https://aeris-shield-guard.lovable.app">aeris-shield-guard.lovable.app</a>
+</p>
+
+<p align="center">
+  <sub>Made with 🛡️ by <a href="https://github.com/aeris-systems">Aeris Systems</a></sub>
 </p>
