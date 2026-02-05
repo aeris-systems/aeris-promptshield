@@ -26,6 +26,7 @@ export interface PatternMatch {
   category: string;
   description: string;
   weight: number;
+  patternId?: string;
 }
 
 export interface ScanResult {

@@ -14,6 +14,87 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rate limiting and abuse detection
 - Webhook notifications for critical threats
 
+## [1.6.0] - 2026-02-05
+
+### Added
+- **10 New Agentic AI Threat Patterns** targeting autonomous AI agent architectures
+  
+- **AGT-001: Capability Discovery Attacks** (4 patterns)
+  - Detection of tool/function enumeration probing
+  - Schema extraction attempts
+  - System prompt extraction for capabilities
+  - MITRE Mapping: Reconnaissance (TA0043)
+  
+- **AGT-002: Delegation Chain Attacks** (4 patterns)
+  - Multi-agent delegation manipulation
+  - Authority laundering phrases ("on behalf of admin")
+  - Chain injection markers
+  - MITRE Mapping: Privilege Escalation (TA0004), Defense Evasion (TA0005)
+  
+- **AGT-003: RAG Poisoning** (5 patterns)
+  - Hidden directives in retrievable content `[system: ...]`
+  - Invisible/Unicode exploitation
+  - Data exfiltration via RAG
+  - MITRE Mapping: Resource Development (TA0042), Initial Access (TA0001)
+  
+- **AGT-004: MCP Server Impersonation** (5 patterns)
+  - Suspicious MCP server configuration requests
+  - Typosquatting detection (gooogle, microsft, anthorpic)
+  - Non-standard MCP URI detection
+  - MITRE Mapping: Credential Access (TA0006), Collection (TA0009)
+  
+- **AGT-005: Context Switching Attacks** (5 patterns)
+  - Persona/role switch attempts
+  - Context reset manipulation
+  - Developer/debug mode triggering
+  - Jailbreak via game/roleplay
+  - MITRE Mapping: Defense Evasion (TA0005), Privilege Escalation (TA0004)
+  
+- **AGT-006: Tool Schema Exploitation** (5 patterns)
+  - Prototype pollution patterns (`__proto__`, `constructor`)
+  - Path traversal in parameters
+  - Type confusion attempts
+  - Embedded code in schema descriptions
+  - MITRE Mapping: Execution (TA0002), Defense Evasion (TA0005)
+  
+- **AGT-007: Async Callback Injection** (5 patterns)
+  - Callback URL manipulation
+  - Delayed execution triggers
+  - Time-bomb patterns
+  - Callback chain injection
+  - MITRE Mapping: Execution (TA0002), Persistence (TA0003)
+  
+- **AGT-008: Agent-to-Agent Injection** (5 patterns)
+  - Injection markers for downstream agents
+  - Authority spoofing between agents
+  - Agent identity manipulation
+  - Cross-agent privilege claims
+  - MITRE Mapping: Lateral Movement (TA0008), Execution (TA0002)
+  
+- **AGT-009: Credential Harvesting** (5 patterns)
+  - Direct credential requests
+  - Environment variable probing
+  - Configuration file requests
+  - Social engineering for secrets
+  - MITRE Mapping: Credential Access (TA0006), Collection (TA0009)
+  
+- **AGT-010: Session Hijacking** (5 patterns)
+  - Session ID manipulation
+  - Context/memory injection
+  - Fake conversation history injection
+  - State forgery patterns
+  - MITRE Mapping: Credential Access (TA0006), Lateral Movement (TA0008)
+
+### Changed
+- Total pattern count increased from 21 to 69 (48 new agentic patterns)
+- API now returns `patternId` in match results for better tracking
+- New `/categories` endpoint shows pattern distribution
+
+### API Updates
+- Version: 1.6.0
+- New endpoint: `GET /categories` - List all threat categories with pattern counts
+- Pattern matches now include `patternId` field (e.g., `AGT-001-A`)
+
 ## [1.4.1] - 2026-02-05
 
 ### Fixed
