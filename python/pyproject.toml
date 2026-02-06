@@ -7,7 +7,7 @@ name = "aeris-promptshield"
 version = "0.1.0"
 description = "Prompt injection detection for AI applications"
 readme = "README.md"
-license = "MIT"
+license = { file = "LICENSE" }
 requires-python = ">=3.8"
 authors = [
     { name = "Aeris Systems", email = "aeris-ai@proton.me" }

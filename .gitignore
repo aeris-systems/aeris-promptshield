@@ -1,0 +1,13 @@
+# Python
+python/dist/
+python/build/
+python/*.egg-info/
+__pycache__/
+*.pyc
+
+# TypeScript
+typescript/node_modules/
+typescript/dist/
+
+# OS
+.DS_Store
