@@ -15,7 +15,7 @@
   <a href="https://shield-aeris-api.oclaw597.workers.dev/health"><img src="https://img.shields.io/badge/API%20v3.5.0-Live-brightgreen" alt="API Status" /></a>
   <a href="#-attack-patterns-detected-669"><img src="https://img.shields.io/badge/Patterns-669+-purple" alt="669+ Detection Patterns" /></a>
   <a href="https://openclaw.ai"><img src="https://img.shields.io/badge/OpenClaw-Compatible-blue" alt="OpenClaw Compatible" /></a>
-  <a href="https://discord.gg/openclaw"><img src="https://img.shields.io/discord/1234567890?color=5865F2&label=Discord&logo=discord&logoColor=white" alt="Discord" /></a>
+  <!-- Discord badge removed (placeholder server id) -->
 </p>
 
 <p align="center">
